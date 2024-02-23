@@ -1,13 +1,13 @@
 # Django Experiment
 
-### Create Your Django app with docker-compose 
+### Create Your Django Admin with docker-compose 
 
 ```
 docker compose run --rm app sh -c "django-admin startproject app ."
 
 ```
 
-### Create app 
+### Create the core app 
 
 ```
 docker compose build

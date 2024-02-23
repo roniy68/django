@@ -20,3 +20,9 @@ docker compose run --rm app sh -c "python manage.py startapp core"
 ```
 docker compose run --rm app sh -c "python manage.py makemigrations"
 ```
+
+### Admin user creation
+
+```
+docker compose run --rm app sh -c "python manage.py createsuperuser "
+```

@@ -24,5 +24,5 @@ docker compose run --rm app sh -c "python manage.py makemigrations"
 ### Admin user creation
 
 ```
-docker compose run --rm app sh -c "python manage.py createsuperuser "
+docker compose run --rm app sh -c "python manage.py createsuperuser"
 ```

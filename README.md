@@ -1,28 +1,5 @@
-# Django Experiment
+# Deploying Django with Docker Compose
 
-### Create Your Django Admin with docker-compose 
+This is the finished source code for the tutorial [Deploying Django with Docker Compose](https://londonappdeveloper.com/deploying-django-with-docker-compose/).
 
-```
-docker compose run --rm app sh -c "django-admin startproject app ."
-
-```
-
-### Create the core app 
-
-```
-docker compose build
-docker compose run --rm app sh -c "python manage.py startapp core"
-
-```
-
-### make migrations 
-
-```
-docker compose run --rm app sh -c "python manage.py makemigrations"
-```
-
-### Admin user creation
-
-```
-docker compose run --rm app sh -c "python manage.py createsuperuser"
-```
+In this tutorial, we teach you how to prepare and deploying a Django project to an AWS EC2 instance using Docker Compose.

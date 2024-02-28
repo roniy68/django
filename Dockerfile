@@ -1,5 +1,6 @@
-FROM python:3.9-alpine3.13
-LABEL maintainer="londonappdeveloper.com"
+FROM python:3.11-alpine3.19
+
+LABEL maintainer="ahmed.hasan.rony@gmail.com"
 
 ENV PYTHONUNBUFFERED 1
 

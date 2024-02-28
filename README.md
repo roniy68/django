@@ -1,5 +1,14 @@
 # KV MAIN REPO
 
+## Local Development Setup
+
+```
+docker compose up 
+chmod +x config.sh && ./config.sh
+docker compose run --rm app sh -c "python manage.py createsuperuser"
+
+```
+
 ### Create Your Django Admin with docker-compose 
 
 ```

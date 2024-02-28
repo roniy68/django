@@ -2,6 +2,8 @@ FROM python:3.11-alpine3.19
 
 LABEL maintainer="ahmed.hasan.rony@gmail.com"
 
+ARG USER
+
 ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
@@ -18,15 +20,15 @@ RUN python -m venv /py && \
         build-base postgresql-dev musl-dev linux-headers && \
     /py/bin/pip install -r /requirements.txt && \
     apk del .tmp-deps && \
-    adduser --disabled-password --no-create-home app && \
+    adduser --disabled-password --no-create-home $USER && \
     mkdir -p /vol/web/static && \
     mkdir -p /vol/web/media && \
-    chown -R app:app /vol && \
+    chown -R $USER:$USER /vol && \
     chmod -R 755 /vol && \
     chmod -R +x /scripts
 
 ENV PATH="/scripts:/py/bin:$PATH"
 
-USER app
+USER $USER
 
 CMD ["run.sh"]

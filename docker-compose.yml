@@ -1,16 +1,16 @@
-version : '3.9'
+version: '3.9'
 
-services: 
+services:
   app:
-    build: 
+    build:
       context: .
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
-    ports: 
+    ports:
       - 8000:8000
-    volumes: 
+    volumes:
       - ./app:/app
       - ./data/web:/vol/web
     environment:
@@ -29,4 +29,3 @@ services:
       - POSTGRES_DB=ahr
       - POSTGRES_USER=ahroniy
       - POSTGRES_PASSWORD=ahroniy
-    
